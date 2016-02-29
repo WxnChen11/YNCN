@@ -1,4 +1,4 @@
 # YNCN
 Website for YNCN Application
 
-yncn.winstonc.me
+http://yncn.winstonc.me
