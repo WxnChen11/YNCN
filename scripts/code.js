@@ -15,6 +15,9 @@ $.getJSON("/scripts/student_courses.json", function(data) {
 
 });
 
+console.log(arrStudents);
+console.log(arrCourses);
+
 var courses = [];
 
 for(i = 0; i < arrCourses.length; i++){
