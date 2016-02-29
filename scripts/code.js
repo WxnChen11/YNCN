@@ -1,11 +1,14 @@
 /**
  * Created by Wenxin on 2/28/2016.
  */
+ 
+var arrStudents;
+var arrCourses;
 
 $.getJSON("/scripts/student_courses.json", function(data) {
 
-    var arrStudents = data.students; //array of students
-    var arrCourses = data.courses; //array of courses
+    arrStudents = data.students; //array of students
+    arrCourses = data.courses; //array of courses
     
     console.log("json ok");
 
