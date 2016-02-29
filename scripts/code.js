@@ -10,9 +10,6 @@ $.getJSON("/scripts/student_courses.json", function(data) {
 
     var arrStudents = data.students; //array of students
     var arrCourses = data.courses; //array of courses
-
-    console.log(arrStudents);
-    console.log(arrCourses);
     
     var courses = [];
     
@@ -27,11 +24,8 @@ $.getJSON("/scripts/student_courses.json", function(data) {
         for(z = 0; z < arrStudents[i].courses.length; z++){
     
             courses[(arrStudents[i].courses)[z]-1].push(arrStudents[i].name);
-            //console.log(courses[((arrStudents[i].courses)[z])-1]);
         }
     }
-    
-    //console.log(courses);
     
     var Professors = [];
     
@@ -50,9 +44,11 @@ $.getJSON("/scripts/student_courses.json", function(data) {
     for (i = 0; i < arrStudents.length; i++){
     
         for (q = 0; q < arrStudents[i].courses.length; q++){
-    
+            
+            //finding index of prof for course
             var insertIndex = inListProfs(Professors, arrCourses[(arrStudents[i].courses)[q]-1].professor); //Must subtract 1 from Course ID!
     
+            //checking to see if student is already in the prof list. If not, push
             if(inList(Professors[insertIndex], arrStudents[i].name) == -1){
                 Professors[insertIndex].push(arrStudents[i].name);
             }
@@ -154,6 +150,8 @@ for(x=0; x<Professors.length; x++){
 }
 
 });
+
+//add names as <li> to <ul>, first element has additional class "title"
 function addNames(id,list, type){
 
     $('#' + type + 'list' + id).append("\
@@ -171,8 +169,6 @@ function inListProfs(list, e){
 
     for(z = 0; z < list.length; z++){
 
-        //console.log((list[z])[0]);
-
         if ((list[z])[0] == e){
             return z;
         }
@@ -181,11 +177,10 @@ function inListProfs(list, e){
     return -1;
 }
 
+//function for finding index of student in list of Professors
 function inList(list, e){
 
     for(a = 0; a < list.length; a++){
-
-        //console.log((list[z])[0]);
 
         if ((list[a]) == e){
             return a;
