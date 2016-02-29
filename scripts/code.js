@@ -2,8 +2,8 @@
  * Created by Wenxin on 2/28/2016.
  */
  
-var arrStudents;
-var arrCourses;
+var arrStudents = [];
+var arrCourses = [];
 
 $.getJSON("/scripts/student_courses.json", function(data) {
 
