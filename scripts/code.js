@@ -6,6 +6,8 @@ $.getJSON("/scripts/student_courses.json", function(data) {
 
     var arrStudents = data.students; //array of students
     var arrCourses = data.courses; //array of courses
+    
+    console.log("json ok");
 
 });
 
