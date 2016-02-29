@@ -2,7 +2,10 @@
  * Created by Wenxin on 2/28/2016.
  */
 
-
+/**
+ * Extendable code. - Should work with any number of students and courses -
+ */
+ 
 $.getJSON("/scripts/student_courses.json", function(data) {
 
     var arrStudents = data.students; //array of students
