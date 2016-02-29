@@ -8,9 +8,10 @@ var arrCourses;
 $.getJSON("/scripts/student_courses.json", function(data) {
 
     arrStudents = data.students; //array of students
+    console.log(arrStudents);
     arrCourses = data.courses; //array of courses
-    
-    console.log("json ok");
+    console.log(arrCourses);
+    //console.log("json ok");
 
 });
 
