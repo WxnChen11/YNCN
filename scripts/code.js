@@ -27,7 +27,7 @@ $.getJSON("scripts/student_courses.json", function(data) {
         }
     }
     
-    var Professors = [];
+    var Professors = []; //Use an object here and a set below (instead of array) to improve runtime
     
     for(i=0; i< arrCourses.length; i++){
     
