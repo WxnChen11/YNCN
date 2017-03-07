@@ -1,4 +1,4 @@
 # YNCN
 Website for YNCN Application
 
-http://yncn.winstonc.me
+http://wxnchen11.github.io/YNCN/
